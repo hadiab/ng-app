@@ -14,13 +14,13 @@ export class TeachersService {
       return of(TEACHERS)
    }
 
-   getTeacherById(id: string): Observable<Teacher | null> {
+   getTeacherById(id: string): Observable<Teacher> {
       const teacher = TEACHERS.find(t => t.id === id)
 
       if(teacher) {
          return of(teacher)
       }
 
-      return of(null)
+      return of(new Teacher("", "", 0, "", "", 0, 0, 0, [], []))
    }
 }
