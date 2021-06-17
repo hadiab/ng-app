@@ -25,7 +25,6 @@ export class TeachersComponent implements OnInit {
    }
 
    goToEdit(id: string): void {
-      console.log("goToEdit")
       this.router.navigate(['/teachers/edit', id])
    }
 

@@ -33,12 +33,7 @@ export class EditTeacherComponent implements OnInit {
    }
 
    submit(): void {
-      // console.log(this.teacher)
       this.router.navigate(['/teachers'])
    }
-
-/*    addProfession(): void {
-      this.teacher.professions.push("")
-   } */
 
 }
