@@ -1,3 +1,4 @@
+import { PupilsRoutingModule } from './pupils-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PupilsComponent } from './pupils.component';
@@ -11,7 +12,8 @@ import { FormsModule } from '@angular/forms';
    ],
    imports: [
       CommonModule,
-      FormsModule
+      FormsModule,
+      PupilsRoutingModule
    ]
 })
 export class PupilsModule { }

@@ -1,31 +1,20 @@
 import { HomeComponent } from './home/home.component';
-import { EmployeesComponent } from './employees/employees.component';
-import { PupilsComponent } from './pupils/pupils.component';
-import { EditTeacherComponent } from './teachers/edit-teacher/edit-teacher.component';
-import { TeachersComponent } from './teachers/teachers.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EditPupilsComponent } from 'src/app/pupils/edit-pupils/edit-pupils.component';
 
 const routes: Routes = [
    { path: "", component: HomeComponent },
    {
       path: "teachers",
-      children: [
-         { path: "", component: TeachersComponent },
-         { path: "edit/:id", component: EditTeacherComponent },
-      ]
+      loadChildren: () => import('./teachers/teachers.module').then(m => m.TeachersModule)
    },
    {
       path: "pupils",
-      children: [
-         { path: "", component: PupilsComponent },
-         { path: "edit/:id", component: EditPupilsComponent },
-      ]
+      loadChildren: () => import('./pupils/pupils.module').then(m => m.PupilsModule)
    },
    {
       path: "employees",
-      component: EmployeesComponent
+      loadChildren: () => import('./employees/employees.module').then(m => m.EmployeesModule)
    }
 ];
 

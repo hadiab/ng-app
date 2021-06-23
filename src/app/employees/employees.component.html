@@ -8,7 +8,11 @@
                <th scope="col">Full Name</th>
                <th scope="col">Age</th>
                <th scope="col">City</th>
+               <th scope="col">Job</th>
+               <th scope="col">Hours Per Month</th>
+               <th scope="col">Hour Salary</th>
                <th scope="col">Salary</th>
+               <th scope="col"></th>
             </tr>
          </thead>
          <tbody>
@@ -20,7 +24,11 @@
                <td>{{employee.fullname}}</td>
                <td>{{employee.age}}</td>
                <td>{{employee.city}}</td>
+               <td>{{employee.job}}</td>
+               <td>{{employee.hoursPerMonth}}</td>
+               <td>{{employee.hourSalary}}</td>
                <td>{{employee.monthSalary | currency}}</td>
+               <td><button (click)="goToEdit(employee.id)" class="btn btn-primary btn-sm">Edit</button></td>
             </tr>
          </tbody>
        </table>
